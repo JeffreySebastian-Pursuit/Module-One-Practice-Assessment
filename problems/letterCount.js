@@ -7,6 +7,19 @@
  *
  */
 
-function letterCount() {}
-
+function letterCount(str) {
+  let count = {};
+  for (let i = 0; i < str.length; i++) {
+    let el = str[i].toLowerCase();
+    if (count[el]) {
+      count[el] += 1;
+    } else if (el === " ") {
+      el.split(" ").length - 1;
+    } else {
+      count[el] = 1;
+    }
+  }
+  return count;
+}
+console.log(letterCount("HELLO World"));
 module.exports = letterCount;

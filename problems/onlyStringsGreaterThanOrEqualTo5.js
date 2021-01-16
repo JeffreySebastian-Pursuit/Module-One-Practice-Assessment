@@ -1,5 +1,5 @@
 /**
- * Returns an array of words that have 5 or more letters. 
+ * Returns an array of words that have 5 or more letters.
  * @param {string[]} words - an array containing words
  * @returns {string[]} - words with 5 or more letters
  *
@@ -7,6 +7,10 @@
  * returns ["hello", "corey"]
  */
 
-function onlyStringsGreaterThanOrEqualTo5() {}
-
+function onlyStringsGreaterThanOrEqualTo5(words) {
+  return words.filter((el) => {
+    return el.length >= 5;
+  });
+}
+console.log(onlyStringsGreaterThanOrEqualTo5(["cat", "hello", "corey", "dog"]));
 module.exports = onlyStringsGreaterThanOrEqualTo5;

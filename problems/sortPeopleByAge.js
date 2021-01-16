@@ -17,6 +17,17 @@
 ]
  */
 
-function sortPeopleByAge() {}
-
+function sortPeopleByAge(people) {
+  return people.sort((person1, person2) => {
+    return person1.age - person2.age;
+  });
+}
+console.log(
+  sortPeopleByAge([
+    { name: "Corey", age: 100 },
+    { name: "Sam", age: 18 },
+    { name: "Sparky", age: 500 },
+    { name: "Peter", age: 50 },
+  ])
+);
 module.exports = sortPeopleByAge;

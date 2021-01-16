@@ -8,6 +8,14 @@
  * returns "hello"
  */
 
-function longestWord() {}
-
+function longestWord(words) {
+  let findLongestWord = "";
+  words.map((el) => {
+    if (el.length > findLongestWord.length) {
+      findLongestWord = el;
+    }
+  });
+  return findLongestWord;
+}
+console.log(longestWord(["cat", "bird", "hello", "corey", "do"]));
 module.exports = longestWord;
